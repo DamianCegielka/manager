@@ -26,12 +26,12 @@
                     </li>
                     -->
                     <li class="nav-link active" th:if="${userRole=='ADMIN'}">
-                        <a class="nav-link active" th:href="@{/users}">[[#{menu.manage}]]</a>
+                        <a class="nav-link active" th:href="@{/users}">Menu.manage <!--[[#{menu.manage}]]--></a>
                     </li>
                 </ul>
                 <form class="d-flex">
                     <a th:if="${userRole}=='USER'" class="nav-link active"
-                       th:href="@{/users/profile}">[[#{menu.profile}]]</a>
+                       th:href="@{/users/profile}">Menu.profile <!--[[#{menu.profile}]]--></a>
                     <a th:if="${idLoginUser == undefined}" class="nav-link active"
                        th:href="@{/login}">menu <!--[[#{menu.login}]]--></a>
                     <a th:if="${idLoginUser == undefined}" class="nav-link active" th:href="@{/users/register}">registration <!-- [[#{menu.registration}]]--></a>
