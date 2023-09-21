@@ -33,8 +33,8 @@
                        th:href="@{/users/profile}">[[#{menu.profile}]]</a>
                     <a th:if="${idLoginUser == undefined}" class="nav-link active"
                        th:href="@{/login}">[[#{menu.login}]]</a>
-                    <a th:if="${idLoginUser == undefined}" class="nav-link active" th:href="@{/users/register}">[[#{menu.registration}]]</a>
-                    <a th:if="${idLoginUser}" class="nav-link active" th:action="@{/doLogout}" th:href="@{/logout}">[[#{menu.logout}]]</a>
+                    <a th:if="${idLoginUser == undefined}" class="nav-link active" th:href="@{/users/register}">registration <!-- [[#{menu.registration}]]--></a>
+                    <a th:if="${idLoginUser}" class="nav-link active" th:action="@{/doLogout}" th:href="@{/logout}">logout<!--[[#{menu.logout}]]--></a>
 
                 </form>
                 <!--
