@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Manager</title>
+    <title>Main Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
 </head>
 <body>
-<h1>Welcome on manager website!</h1>
+<div th:replace="~{navbar::navbar}"></div>
+<div class="container">
+    <div class="row" style="min-height: 85vh;">
+        <div th:if="${success}" class="alert alert-success text-center">
+            [[${success}]]
+        </div>
+        <div th:if="${error}" class="alert alert-danger text-center">
+            [[${error}]]
+        </div>
+        <div class="col col-12 text-center">
+            <h1>[[#{app.title}]]</h1>
+            <div></div>
+        </div>
+    </div>
+    <div th:replace="~{footer::footer}"></div>
+</div>
 </body>
 </html>
